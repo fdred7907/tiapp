@@ -1,0 +1,17 @@
+<%- include ("../partials/head") %>
+<h1>
+    List of TIs 
+</h1>
+<div>
+    <ul class="list">
+        <% tis.forEach(ti => { %>
+            <ul>
+                <li>Name: <%- ti.name %></li>
+                <li>Country: <%- ti.country %></li>
+                <li>City: <%- ti.city %></li>
+                <li>Gender: <%- ti.gender %></li>
+            </ul>
+        <% }) %>
+    </ul>
+</div>
+<%- include('../partials/foot')%>
