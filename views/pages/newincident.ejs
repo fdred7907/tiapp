@@ -1,0 +1,37 @@
+<%- include("../partials/head.ejs") -%>
+    <form action="/incidents/new" method="post">
+        <label for="ti">TI:</label>
+        <input type="text" id="ti" name="ti" >
+        <br>
+        <label for="place">Place:</label>
+        <input type="text" id="place" name="place" >
+        <br>
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date">
+        <br>
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" >
+        <br>
+        <label for="action">Action:</label>
+        <input type="text" id="action" name="action" >
+        <br>
+        <label for="pictures">Pictures:</label>
+        <input type="text" id="pictures" name="pictures">
+        <br>
+        <label for="video">Video:</label>
+        <input type="text" id="video" name="video">
+        <br>
+        <label for="audio">Audio:</label>
+        <input type="text" id="audio" name="audio">
+        <br>
+        <label for="documents">Documents:</label>
+        <input type="text" id="documents" name="documents">
+        <br>
+        <label for="links">Links:</label>
+        <input type="text" id="links" name="links">
+        <br>
+
+        <button type="submit">Submit</button>
+    </form><!--  -->
+
+<%- include("../partials/foot.ejs") -%>

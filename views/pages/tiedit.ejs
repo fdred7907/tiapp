@@ -1,0 +1,23 @@
+<%- include("../partials/head.ejs") -%>
+    <form action="/tis/edit/<%= ti.name %>/" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="<%= ti.name %>">
+        <br>
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" value="<%= ti.country %>">
+        <br>
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" value="<%= ti.city %>">
+        <br>
+        <label for="gender">Gender:</label>
+        <input type="text" id="gender" name="gender" value="<%= ti.gender %>">
+        <br>
+        <label for="symptoms">Symptoms:</label>
+        <input type="text" id="symptoms" name="symptoms" value="<%= ti.symptoms %>">
+        <br>
+        <label for="activism">Activism:</label>
+        <input type="text" id="activism" name="activism" value="<%= ti.activism %>">
+        <br>
+        <button type="submit">Submit</button>
+    </form><!--  -->
+<%- include("../partials/foot.ejs") -%>

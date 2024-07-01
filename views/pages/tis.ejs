@@ -3,14 +3,22 @@
     List of TIs 
 </h1>
 <div>
-    <ul class="list">
+    <ul class="tis-list">
         <% tis.forEach(ti => { %>
-            <ul>
-                <li>Name: <%- ti.name %></li>
-                <li>Country: <%- ti.country %></li>
-                <li>City: <%- ti.city %></li>
-                <li>Gender: <%- ti.gender %></li>
-            </ul>
+            <div class="tis-entry">
+                <ul>
+                    <li><%- ti.name %></li>
+                    <li><%- ti.country %></li>
+                    <li><%- ti.city %></li>
+                    <li><%- ti.gender %></li>
+                    <form action="/tis/edit/<%= ti.name %>" method="get">
+                        <button type="submit">Edit</button>
+                    </form> 
+                    <form action="/tis/show/<%= ti.name %>" method="get">
+                        <button type="submit">View</button>
+                    </form> 
+                </ul>
+            </div>
         <% }) %>
     </ul>
 </div>

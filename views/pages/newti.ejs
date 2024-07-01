@@ -1,0 +1,24 @@
+<%- include("../partials/head.ejs") -%>
+    <form action="/tis/new" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" >
+        <br>
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" >
+        <br>
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city">
+        <br>
+        <label for="gender">Gender:</label>
+        <input type="text" id="gender" name="gender" >
+        <br>
+        <label for="symptoms">Symptoms:</label>
+        <input type="text" id="symptoms" name="symptoms" >
+        <br>
+        <label for="activism">Activism:</label>
+        <input type="text" id="activism" name="activism">
+        <br>
+        <button type="submit">Submit</button>
+    </form><!--  -->
+
+<%- include("../partials/foot.ejs") -%>

@@ -1,0 +1,16 @@
+<%- include('../partials/head.ejs') %>
+    <h1>Incidents</h1>
+    <div class="incidents-list">
+        <% incidents.forEach(incident => { %>
+            <div class="incident-entry">
+                <ul>
+                    <li><%- incident.ti %></li>
+                    <li><%- incident.place %></li>
+                    <li><%- incident.date %></li>
+                    <li><%- incident.description %></li>
+                    <li><%- incident.action %></li>
+                    <a href="/incidents/<%= incident.date %>">Show More</a>
+                </ul>
+            </div>
+        <% }) %>
+    </div>
