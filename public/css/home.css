@@ -1,0 +1,31 @@
+home {
+    color:purple;
+    width:70%;
+    height:90%;
+    margin:auto auto;
+    text-align: center;
+    display:flex;
+    align-items: center;
+    font-size:4rem;
+    font-weight:bold;
+    
+}
+
+.home-img{
+    position:absolute;
+    opacity:0.4;
+    width:100%;
+    height:auto;
+    top:0;
+    left:0;
+    z-index: -1;
+}
+
+.home-text{
+    position:relative;
+}
+
+.home h3{
+    color: orangered
+
+}

@@ -1,25 +1,25 @@
 <%- include ("../partials/head") %>
-<h1>
-    List of TIs 
-</h1>
-<div>
-    <ul class="tis-list">
-        <% tis.forEach(ti => { %>
-            <div class="tis-entry">
-                <ul>
-                    <li><%- ti.name %></li>
-                    <li><%- ti.country %></li>
-                    <li><%- ti.city %></li>
-                    <li><%- ti.gender %></li>
-                    <form action="/tis/edit/<%= ti.name %>" method="get">
-                        <button type="submit">Edit</button>
-                    </form> 
-                    <form action="/tis/show/<%= ti.name %>" method="get">
-                        <button type="submit">View</button>
-                    </form> 
-                </ul>
-            </div>
-        <% }) %>
-    </ul>
+<div class="tis">
+    <h1 class="tis-title">
+        List of TIs 
+    </h1>
+        <ul class="tis-list-container">
+            <% tis.forEach(ti => { %>
+                <div class="tis-list-item-container">
+                    <ul class="tis-list-item-list">
+                        <li style="font-weight:bold;font-size: 4rem;"><%- ti.name %></li>
+                        <li style="color:brown"><%- ti.city %></li>
+                        <li style="color:brown"><%- ti.country %></li>
+                        <li style="color:brown"><%- ti.gender %></li>
+                        <form action="/tis/edit/<%= ti.name %>" method="get">
+                            <button type="submit" class="tis-button">Edit</button>
+                        </form> 
+                        <form action="/tis/show/<%= ti.name %>" method="get">
+                            <button type="submit" class="tis-button">View</button>
+                        </form> 
+                    </ul>
+                </div>
+            <% }) %>
+        </ul>
 </div>
 <%- include('../partials/foot')%>

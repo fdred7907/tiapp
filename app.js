@@ -3,6 +3,7 @@ const express = require("express");
 const router = require("./routes");
 const bodyParser = require("body-parser");
 const path = require('path');
+const cookieParser = require('cookie-parser');
 
 const app = express();
 
@@ -18,6 +19,7 @@ mongoose.connect('mongodb://localhost:27017/TIdb', {useNewUrlParser: true, useUn
 
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static('public'));
+app.use(cookieParser());
 
 app.engine('ejs', require('ejs').renderFile);
 app.set('view engine','ejs');

@@ -1,0 +1,47 @@
+.tis-list-container{
+    display:flex;
+    height:90%;
+    width:90%;
+    margin:auto auto;
+    align-items:center;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+
+
+
+.tis-list-item-container{
+    /* border: solid 5px black; */
+    margin:30px 30px;
+    padding:10px 10px;
+    border-radius: 20px;
+    font-size:2rem;
+    color:darkblue;
+    text-align:center;
+    background-color: yellow;
+    flex-basis: 40%;
+}
+
+.tis-list-item-list{
+    list-style-type:none;
+}
+
+.tis-title{
+    text-align: center;
+    color:purple;
+    font-size:4rem;
+
+}
+
+.body,html{
+    background-color:lightblue;
+}
+
+.tis-button{
+    background-color: darkblue;
+    color:yellow;
+    border:0;
+    padding:10px 10px;
+    border-radius: 10px;
+    font-size:1.5rem;
+}
