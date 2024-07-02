@@ -3,23 +3,45 @@
     <h1 class="tis-title">
         List of TIs 
     </h1>
-        <ul class="tis-list-container">
-            <% tis.forEach(ti => { %>
-                <div class="tis-list-item-container">
-                    <ul class="tis-list-item-list">
-                        <li style="font-weight:bold;font-size: 4rem;"><%- ti.name %></li>
-                        <li style="color:brown"><%- ti.city %></li>
-                        <li style="color:brown"><%- ti.country %></li>
-                        <li style="color:brown"><%- ti.gender %></li>
-                        <form action="/tis/edit/<%= ti.name %>" method="get">
-                            <button type="submit" class="tis-button">Edit</button>
-                        </form> 
-                        <form action="/tis/show/<%= ti.name %>" method="get">
-                            <button type="submit" class="tis-button">View</button>
-                        </form> 
-                    </ul>
-                </div>
-            <% }) %>
-        </ul>
+    <div class="tis-find tis-find-container">
+        <form method="post" action="/tis/find">
+            <!-- <label for="ti">Find TI By Name</label> -->
+            <input type="text" id="ti" name="ti">
+            <button type="submit">Search TI By Name</button>
+        </form>
+    </div>
+    <div class="tis-find tis-find-container">
+        <form method="post" action="/tis/filter">
+            <!-- <label for="ti">Find TI By Name</label> -->
+            <select id="filterCat" name="filterCat">
+                <option value="country">Country</option>
+                <option value="city">City</option>
+                <option value="gender">Gender</option>
+                <option value="symptoms">Symptoms</option>
+                <option value="activism">Activism</option>
+            </select>
+            <input type="text" id="filterValue" name="filterValue">
+            <button type="submit">Filter By</button>
+        </form>
+    </div>
+
+    <ul class="tis-list-container">
+        <% tis.forEach(ti => { %>
+            <div class="tis-list-item-container">
+                <ul class="tis-list-item-list">
+                    <li style="font-weight:bold;font-size: 4rem;"><%- ti.name %></li>
+                    <li style="color:purple"><%- ti.city %></li>
+                    <li style="color:purple"><%- ti.country %></li>
+                    <li style="color:purple"><%- ti.gender %></li>
+                    <form action="/tis/edit/<%= ti.name %>" method="get">
+                        <button type="submit" class="tis-button">Edit</button>
+                    </form> 
+                    <form action="/tis/show/<%= ti.name %>" method="get">
+                        <button type="submit" class="tis-button">View</button>
+                    </form> 
+                </ul>
+            </div>
+        <% }) %>
+    </ul>
 </div>
 <%- include('../partials/foot')%>

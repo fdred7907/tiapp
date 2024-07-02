@@ -11,14 +11,14 @@
 
 
 .tis-list-item-container{
-    /* border: solid 5px black; */
+    border: solid 5px black;
     margin:30px 30px;
     padding:10px 10px;
     border-radius: 20px;
     font-size:2rem;
     color:darkblue;
     text-align:center;
-    background-color: yellow;
+    background-color: lightgray;
     flex-basis: 40%;
 }
 
@@ -44,4 +44,5 @@
     padding:10px 10px;
     border-radius: 10px;
     font-size:1.5rem;
+    margin:5px;
 }

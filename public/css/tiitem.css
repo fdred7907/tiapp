@@ -1,0 +1,35 @@
+body {
+    height:100vh;
+}
+
+.ti-item{display:flex;
+    box-sizing:border-box;
+    min-height:90%;
+    width:90%;
+    margin:auto auto;
+    align-items:center;
+    justify-content:center;
+    flex-wrap: wrap;
+   
+}
+
+.ti-item-container{
+    border: solid 5px black;
+    margin:30px 30px;
+    padding:20px 20px;
+    border-radius: 20px;
+    width:auto;
+    height:90%; 
+    font-size:2rem;
+    color:darkblue;
+    text-align:left;
+    background-color: lightgray;
+    list-style-type: none;
+}
+
+.ti-item-title{
+    text-align: center;
+    font-size: 3rem;
+    color: purple;
+    font-weight: bold;
+}

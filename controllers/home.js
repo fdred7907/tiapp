@@ -16,8 +16,10 @@ const User = require("../models/users");
 const getHomePage = ((req,res,next)=>{
     // const body = req.body;
     // console.log(body);
+    const styles=[];
+    styles.push("/css/home.css");
     console.log(req.session);
-    res.render("home");
+    res.render("home",{styles:styles});
     next();
 });
 

@@ -12,7 +12,7 @@ const User = require("./models/users");
 
 const getHomePage =require("./controllers/home");
 
-const {getNewTI,postNewTI,getTI,editTI,deleteTI,getTIs,postEditTI} = require("./controllers/tis");
+const {getNewTI,postNewTI,getTI,editTI,deleteTI,getTIs,postEditTI,postFindTI,postFilterTI} = require("./controllers/tis");
 const {getIncident,getNewIncident,postNewIncident,getIncidents} = require("./controllers/incidents");
 const {getUserNew,postUserNew,getUserLogin,postUserLogin,getUserLogout,Verify} = require("./controllers/users");
 
@@ -36,9 +36,10 @@ router.get("/tis",getTIs);
 
 router.post("/tis/new",postNewTI);
     
-
+router.post("/tis/find",postFindTI);
 
 router.post("/tis/edit/:name",postEditTI);
+router.post("/tis/filter",postFilterTI);
 
 //incident routes
 

@@ -10,6 +10,8 @@ const TI = require("../models/tis");
 const Incident = require("../models/incidents");
 const User = require("../models/users");
 
+const styles = [];
+
 const getNewTI = ((req,res,next)=>{
     
     res.render("newti");
@@ -17,11 +19,13 @@ const getNewTI = ((req,res,next)=>{
 });
 
 const getTI = ((req,res,next)=>{
+    const styles = [];
+    styles.push("/css/tiitem.css");
     const name = req.params.name;
     console.log(name);
     return TI.findOne({name:name})
     .then((ti)=>{
-        res.render("tishow",{ti:ti});
+        res.render("tishow",{ti:ti,styles:styles});
     })
     .catch((err)=>{
         console.log(err);               
@@ -58,10 +62,14 @@ const deleteTI = ((req,res,next)=>{
     next();     
 })
 
+
+
 const getTIs = ((req,res,next)=>{
+    const styles = [];
+    styles.push("/css/tis.css");
     return TI.find({})
     .then((tis)=>{
-        res.render("tis",{tis:tis});
+        res.render("tis",{tis:tis,styles:styles});
     })
     .catch((err)=>{
         console.log(err);
@@ -114,6 +122,48 @@ const postEditTI = ((req,res,next)=>{
     next();
 });
 
+const postFindTI =((req,res,next)=>{
+    const ti = req.body.ti;
+    // console.log(ti);
+    styles.push("/css/tiitem.css");
+    return TI.findOne({name:{$regex:ti,$options:"i"}})
+    .then((ti)=>{
+        if (ti){
+        res.render('tishow',{ti:ti,styles:styles});
+        }
+        else{  
+            res.status(401).send("TI not found");
+        }
+    })
+    .catch((err)=>{
+        res.status(401).send(err);
+    });
+    next();
+});
+
+
+const postFilterTI =((req,res,next)=>{
+    const category = req.body.filterCat;
+    const value = req.body.filterValue;
+    let query={};
+    query[category] ={$regex:value,$options:"i"};
+    styles.push("/css/tis.css");
+    return TI.find(query)
+    .then((tis)=>{
+        console.log(tis.length);
+        if (tis.length > 0){
+            res.render('tis',{tis:tis,styles:styles});
+        }
+        else{
+            res.status(401).send("No TIs match the search criteria");
+        }
+    })
+    .catch((err)=>{
+        res.status(401).send(err);
+    });
+    next();
+});
+
 module.exports = {
     getNewTI,
     getTI,
@@ -121,7 +171,9 @@ module.exports = {
     deleteTI,
     getTIs,
     postNewTI,
-    postEditTI
+    postEditTI,
+    postFindTI,
+    postFilterTI
 };
 
 
