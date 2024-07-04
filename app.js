@@ -9,7 +9,7 @@ const app = express();
 
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/TIdb', {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect('mongodb://AdminAnkit:admin2024@localhost:27017/TIdb?authSource=admin', {useNewUrlParser: true, useUnifiedTopology: true})
 .then(() => {
   console.log('Connected to MongoDB');
 })
