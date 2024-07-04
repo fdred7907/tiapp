@@ -33,9 +33,7 @@
 
 }
 
-.body,html{
-    background-color:lightblue;
-}
+
 
 .tis-button{
     background-color: darkblue;
@@ -45,4 +43,8 @@
     border-radius: 10px;
     font-size:1.5rem;
     margin:5px;
+}
+
+.tis-button:hover {
+    color:aliceblue;
 }

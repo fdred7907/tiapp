@@ -2,7 +2,7 @@ body {
     height:100vh;
 }
 
-.ti-item{display:flex;
+.ti-item-container{display:flex;
     box-sizing:border-box;
     min-height:90%;
     width:90%;
@@ -13,7 +13,7 @@ body {
    
 }
 
-.ti-item-container{
+.ti-item{
     border: solid 5px black;
     margin:30px 30px;
     padding:20px 20px;
@@ -32,4 +32,25 @@ body {
     font-size: 3rem;
     color: purple;
     font-weight: bold;
+}
+
+.ti-item-btn-container{
+    display:flex;
+    justify-content:center;
+    margin:10px 10px;
+    padding: 10px 10px;
+}
+
+.ti-item-btn{
+    background-color: darkblue;
+    color:yellow;
+    border:0;
+    padding:10px 10px;
+    border-radius: 10px;
+    font-size:1.5rem;
+    margin:5px;
+}
+
+.ti-item-btn:hover{
+    color:aliceblue;
 }

@@ -1,12 +1,16 @@
 <%- include("../partials/head.ejs") %>
-    <h1>Incident on <%- incident.date %> involving <%- incident.ti %></h1>
-    <p><%- incident.description %></p>
-    <p><%- incident.action %></p>
-    <p><%- incident.place %></p>
-    <p><%- incident.date %></p>
-    <p><%- incident.pictures %></p>
-    <p><%- incident.videos %></p>
-    <p><%- incident.audio %></p>
-    <p><%- incident.documents %></p>
-    <p><%- incident.links %></p>
+<div class="incident-title">
+    <h1>Incident on <%- dateParser(incident.date) %> involving <%- incident.ti %></h1>
+</div>
+<div class="incident-container">
+    <p><span class="incident-span">Incident: </span><%- incident.description %></p>
+    <p><span class="incident-span">Action: </span><%- incident.action %></p>
+    <p><span class="incident-span"></span><%- incident.place %></p>
+    <p><span class="incident-span"></span><%- dateParser(incident.date) %></p>
+    <p><span class="incident-span"></span><%- incident.pictures %></p>
+    <p><span class="incident-span"></span><%- incident.videos %></p>
+    <p><span class="incident-span"></span><%- incident.audio %></p>
+    <p><span class="incident-span"></span><%- incident.documents %></p>
+    <p><span class="incident-span"></span><%- incident.links %></p>
+</div>
 <%- include("../partials/foot.ejs") %>

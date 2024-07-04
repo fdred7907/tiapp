@@ -1,0 +1,50 @@
+.incidents-title{
+    text-align: center;
+    color:purple;
+    font-size:4rem;
+}
+
+.incidents-container{
+    display:flex;
+    height:90%;
+    width:90%;
+    margin:auto auto;
+    align-items:center;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+
+.incidents-item{
+    border: solid 5px black;
+    margin:30px 30px;
+    padding:10px 10px;
+    border-radius: 20px;
+    font-size:2rem;
+    color:darkblue;
+    text-align:center;
+    background-color: lightgray;
+    flex-basis: 40%;
+    list-style-type:none;
+}
+
+.incidents-item-li{
+    font-size:2rem;
+    border-radius:25px;
+    margin:20px;
+
+}
+
+.incidents-item-btn{
+    background-color: darkblue;
+    color:yellow;
+    border:0;
+    padding:10px 10px;
+    border-radius: 10px;
+    margin:1.5em;
+    font-size:1.5rem;
+   
+}
+
+.incidents-item-btn:hover{
+    color:aliceblue;
+}

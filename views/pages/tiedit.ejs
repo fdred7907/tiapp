@@ -1,23 +1,25 @@
 <%- include("../partials/head.ejs") -%>
-    <form action="/tis/edit/<%= ti.name %>/" method="post">
+<div class="ti-edit-form-container">
+    <form action="/tis/edit/<%= ti.name %>/" method="post" class="ti-edit-form">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" value="<%= ti.name %>">
+        <input type="text" id="name" name="name" value="<%= ti.name %>" class="ti-edit-input">
         <br>
         <label for="country">Country:</label>
-        <input type="text" id="country" name="country" value="<%= ti.country %>">
+        <input type="text" id="country" name="country" value="<%= ti.country %>" class="ti-edit-input">
         <br>
         <label for="city">City:</label>
-        <input type="text" id="city" name="city" value="<%= ti.city %>">
+        <input type="text" id="city" name="city" value="<%= ti.city %>" class="ti-edit-input">
         <br>
         <label for="gender">Gender:</label>
-        <input type="text" id="gender" name="gender" value="<%= ti.gender %>">
+        <input type="text" id="gender" name="gender" value="<%= ti.gender %>" class="ti-edit-input">
         <br>
         <label for="symptoms">Symptoms:</label>
-        <input type="text" id="symptoms" name="symptoms" value="<%= ti.symptoms %>">
+        <textarea id="symptoms" name="symptoms" class="ti-edit-input"><%= ti.symptoms %></textarea>
         <br>
         <label for="activism">Activism:</label>
-        <input type="text" id="activism" name="activism" value="<%= ti.activism %>">
+        <textarea id="activism" name="activism" class="ti-edit-input"> <%= ti.activism %></textarea>
         <br>
-        <button type="submit">Submit</button>
+        <button type="submit" class="ti-edit-btn">Submit</button>
     </form><!--  -->
+</div>
 <%- include("../partials/foot.ejs") -%>

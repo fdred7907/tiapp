@@ -52,7 +52,7 @@ const postUserLogin = (async (req,res,next)=>{
             httpOnly:true,
             secure:false,
             sameSite:"strict",
-            maxAge:300*1000
+            maxAge:5000*1000
         });
         res.status(200).json({message:"Login successful"});
         

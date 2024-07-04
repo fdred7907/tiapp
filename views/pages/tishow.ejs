@@ -2,21 +2,22 @@
 <h1 class="ti-item-title">
     <%- ti.name %>
 </h1>
-<div class="=ti-item">
-            <ul class="ti-item-container">
+<div class="=ti-item-container">
+            <ul class="ti-item">
                 <li style="font-weight:bold;font-size: 4rem;"><span>NAME : </span><%- ti.name %></li>
-                <li style="color:purple"><span>COUNTRY : </span><%- ti.country %></li>
-                <li style="color:purple"><span>CITY : </span><%- ti.city %></li>
-                <li style="color:purple"><span>GENDER : </span><%- ti.gender %></li>
-                <li style="color:orangered"><span>SYMPTOMS : </span><%- ti.symptoms %></li>
-                <li style="color:orangered"><span>ACTIVISM : </span><%- ti.activism %></li>
-
-                <form action="/tis/edit/<%= ti.name %>" method="get">
-                    <button type="submit">Edit</button>
-                </form> 
-                <form action="/tis/delete/<%= ti.name %>" method="get">
-                    <button type="submit">Delete</button>
-                </form> 
+                <li style="color:purple; margin-top:10px;"><span>COUNTRY : </span><%- ti.country %></li>
+                <li style="color:purple; margin-top:10px;"><span>CITY : </span><%- ti.city %></li>
+                <li style="color:purple; margin-top:10px;"><span>GENDER : </span><%- ti.gender %></li>
+                <li style="color:orangered; margin-top:10px;"><span>SYMPTOMS : </span><%- ti.symptoms %></li>
+                <li style="color:orangered; margin-top:10px;"><span>ACTIVISM : </span><%- ti.activism %></li>
+                <div class="ti-item-btn-container">
+                    <form action="/tis/edit/<%= ti.name %>" method="get">
+                        <button type="submit" class="ti-item-btn">Edit</button>
+                    </form> 
+                    <form action="/tis/delete/<%= ti.name %>" method="get">
+                        <button type="submit" class="ti-item-btn">Delete</button>
+                    </form> 
+                </div>
             </ul>
 </div>
 <%- include('../partials/foot') %>

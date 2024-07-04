@@ -13,8 +13,9 @@ const User = require("../models/users");
 const styles = [];
 
 const getNewTI = ((req,res,next)=>{
-    
-    res.render("newti");
+    const styles =[];
+    styles.push("/css/tinew.css");
+    res.render("newti",{styles:styles});
     next();
 });
 
@@ -36,10 +37,11 @@ const getTI = ((req,res,next)=>{
 const editTI = ((req,res,next)=>{
 
     const name = req.params.name;   
+    styles.push('/css/tiedit.css');
 
     return TI.findOne({name:name})
     .then((ti)=>{
-        res.render("tiedit",{ti:ti});
+        res.render("tiedit",{ti:ti,styles:styles});
     })
     .catch((err)=>{
         console.log(err);               
@@ -87,13 +89,15 @@ const postNewTI = ((req,res,next)=>{
         symptoms : req.body.symptoms,
         activism : req.body.activism,
     });
-    console.log(newTI);
+    
+    const styles=[];
+    styles.push('/css/tis.css');
 
     return newTI.save()
     .then(()=>{
         TI.find({})
         .then((tis)=>{
-            res.render("tis",{tis:tis});      
+            res.render("tis",{tis:tis,styles:styles});      
         })
     })
     .catch((err)=>{
@@ -105,6 +109,8 @@ const postNewTI = ((req,res,next)=>{
 const postEditTI = ((req,res,next)=>{
     const name = req.params.name;
 
+    styles.push('/css/tiitem.css')
+
     return TI.findOne({name:name})
     .then((ti)=>{
         ti.name = req.body.name;
@@ -114,7 +120,7 @@ const postEditTI = ((req,res,next)=>{
         ti.symptoms = req.body.symptoms;
         ti.activism = req.body.activism;
         ti.save();
-        res.render("tishow",{ti:ti});
+        res.render("tishow",{ti:ti,styles:styles});
     })
     .catch((err)=>{
         console.log(err);               

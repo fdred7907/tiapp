@@ -1,24 +1,26 @@
 <%- include("../partials/head.ejs") -%>
-    <form action="/tis/new" method="post">
+<div class="ti-new-form-container">
+    <form action="/tis/new" method="post" class="ti-new-form">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" >
+        <input type="text" id="name" name="name"  class="ti-new-input">
         <br>
         <label for="country">Country:</label>
-        <input type="text" id="country" name="country" >
+        <input type="text" id="country" name="country"  class="ti-new-input">
         <br>
         <label for="city">City:</label>
-        <input type="text" id="city" name="city">
+        <input type="text" id="city" name="city" class="ti-new-input">
         <br>
         <label for="gender">Gender:</label>
-        <input type="text" id="gender" name="gender" >
+        <input type="text" id="gender" name="gender"  class="ti-new-input">
         <br>
         <label for="symptoms">Symptoms:</label>
-        <input type="text" id="symptoms" name="symptoms" >
+        <textarea id="symptoms" name="symptoms" class="ti-new-input"></textarea>
         <br>
         <label for="activism">Activism:</label>
-        <input type="text" id="activism" name="activism">
+        <textarea id="activism" name="activism" class="ti-new-input"></textarea>
         <br>
-        <button type="submit">Submit</button>
+        <button type="submit" class="ti-new-btn">Submit</button>
     </form><!--  -->
+</div>
 
 <%- include("../partials/foot.ejs") -%>

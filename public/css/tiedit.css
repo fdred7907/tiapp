@@ -1,0 +1,53 @@
+.body{
+    height:100vh;
+}
+
+.ti-edit-form-container{
+    width:60%;
+    margin:0;
+    position:absolute;
+    top:50%;
+    left:50%;
+    /* transform:translateX(-50%); */
+    transform:translateY(-50%) translateX(-50%);
+
+
+}
+
+.ti-edit-form{
+    border: solid 5px black;
+    margin:30px 30px;
+    padding:20px 20px;
+    border-radius: 20px;
+    width:auto;
+    height:90%; 
+    font-size:3rem;
+    color:darkblue;
+    text-align:left;
+    background-color: lightgray;
+}
+
+.ti-edit-input{
+    font-size:2rem;
+    border-radius:25px;
+    margin:5px;
+
+}
+
+.ti-edit-btn{
+    background-color: darkblue;
+    color:yellow;
+    border:0;
+    padding:10px 10px;
+    border-radius: 10px;
+    font-size:1.5rem;
+    position:relative;
+    top:5px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.ti-edit-btn:hover{
+    color:aliceblue;
+}
+
