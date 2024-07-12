@@ -54,3 +54,13 @@ body {
 .ti-item-btn:hover{
     color:aliceblue;
 }
+
+@media only screen and (max-width: 768px) {
+    .ti-item-title{
+        font-size: 1.5rem;
+    }
+
+    .ti-item , .ti-item-btn {
+        font-size: 1rem;
+    }
+}

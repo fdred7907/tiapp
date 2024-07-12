@@ -10,7 +10,7 @@
 
 
 
-.tis-list-item-container{
+.tis-list-item{
     border: solid 5px black;
     margin:30px 30px;
     padding:10px 10px;
@@ -22,8 +22,12 @@
     flex-basis: 40%;
 }
 
-.tis-list-item-list{
+.tis-list-item li{
     list-style-type:none;
+    text-align:center;
+    margin:auto;
+    padding:10px 10px;
+
 }
 
 .tis-title{
@@ -47,4 +51,15 @@
 
 .tis-button:hover {
     color:aliceblue;
+}
+
+@media only screen and (max-width: 768px) {
+    .tis-title{
+        font-size: 2rem;
+    }
+
+    .tis-list-item{
+        font-size: 1.5rem;
+    }
+
 }

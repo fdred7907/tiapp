@@ -27,9 +27,8 @@
 
     <ul class="tis-list-container">
         <% tis.forEach(ti => { %>
-            <div class="tis-list-item-container">
-                <ul class="tis-list-item-list">
-                    <li style="font-weight:bold;font-size: 4rem;"><%- ti.name %></li>
+                <ul class="tis-list-item">
+                    <li style="font-weight:bold;font-size: 2.5rem;"><%- ti.name %></li>
                     <li style="color:purple"><%- ti.city %></li>
                     <li style="color:purple"><%- ti.country %></li>
                     <li style="color:purple"><%- ti.gender %></li>
@@ -40,7 +39,6 @@
                         <button type="submit" class="tis-button">View</button>
                     </form> 
                 </ul>
-            </div>
         <% }) %>
     </ul>
 </div>

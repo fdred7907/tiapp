@@ -152,7 +152,8 @@ const postFilterTI =((req,res,next)=>{
     const category = req.body.filterCat;
     const value = req.body.filterValue;
     let query={};
-    query[category] ={$regex:value,$options:"i"};
+    query[category] ={$regex:`(^|\b|\\p{P})${value}(\b|$|\\p{P})`,$options:"iu"};
+    console.log(query);
     styles.push("/css/tis.css");
     return TI.find(query)
     .then((tis)=>{
