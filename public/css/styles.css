@@ -24,14 +24,17 @@ html,body {
 nav {
 
     background-color: darkblue;     
-    padding: 1rem;
+    /* padding: 1rem; */
     margin:0px 0px;
-    padding:10px 10px;
+    padding:1rem 1.5rem;
     position:relative;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
     
 }
 
-nav ul {
+.nav-links-container{
 
         list-style-type: none;
     
@@ -40,6 +43,7 @@ nav ul {
         margin: 0;
     
         display: flex;
+        width:100%;
     
         justify-content: space-between;
         align-items: center;
@@ -65,5 +69,47 @@ nav ul {
     margin-left:auto;
 }
 
+.hamburger {
+    display:none;
+}
 
+.bar{
+    display:block;
+    height:5px;
+    width:25px;
+    margin:5px auto;
+    -webkit-transition:all 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
+    background-color: yellow;
 
+    }
+
+@media only screen and (max-width: 768px) {
+
+    .nav-links-container{
+        position:fixed;
+        left:-100%;
+        top:5rem;
+        flex-direction:column;
+        background-color: darkblue;
+        width:100%;
+        border-radius:10px;
+        text-align:center;
+        transition:all 0.3s easei-in-out;
+        box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+    }
+
+    .active{
+        /* display:fixed; */
+        left:0;
+    }
+
+    .hamburger{
+        display:block;
+        cursor:pointer;
+        margin-left:auto;
+    }
+    .nav-right{
+        margin-left:10px;
+    }
+}

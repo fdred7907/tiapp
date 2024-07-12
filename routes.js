@@ -22,13 +22,13 @@ router.get("/",getHomePage)
 
 //TI routes
 
-router.get("/tis/new",getNewTI);
+router.get("/tis/new",Verify,getNewTI);
 
 router.get("/tis/show/:name",getTI);
 
 router.get("/tis/edit/:name",Verify,editTI);
 
-router.get("/tis/delete/:name",deleteTI);
+router.get("/tis/delete/:name",Verify,deleteTI);
 
 router.get("/tis",getTIs);
 
@@ -45,9 +45,9 @@ router.post("/tis/filter",postFilterTI);
 
 router.get("/incidents/show/:date",getIncident);
 
-router.get("/incidents/new",getNewIncident);
+router.get("/incidents/new",Verify,getNewIncident);
 
-router.post("/incidents/new",postNewIncident);
+router.post("/incidents/new",Verify,postNewIncident);
 
 
 router.get("/incidents",getIncidents);
@@ -55,7 +55,7 @@ router.get("/incidents",getIncidents);
 
 
 //user routes
-router.get("/users/new",getUserNew);
+router.get("/users/new",Verify,getUserNew);
 router.post("/users/new",postUserNew);
 router.get("/users/login",getUserLogin);
 

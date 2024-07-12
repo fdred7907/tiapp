@@ -11,11 +11,11 @@
         <% for (let style of styles) {%>
             <link href="<%= style %>" rel="stylesheet"  type="text/css"/>
         <% } %> 
-    <% } %>   
+    <% } %> 
 </head>
 <body>
 <nav>
-    <ul>
+    <ul class="nav-links-container">
         <li class="nav-links">
             <div >
                 <a href="/tis">Targeted Individuals List</a>
@@ -32,26 +32,25 @@
             </div>
         </li>
         <li class="nav-links">
-            <div >
                 <a href="/incidents/new">Add New Incident</a>
-            </div>
         </li>
         <li class="nav-links nav-right">
-            <div >
                 <a href="/users/new">Register User</a>
-            </div>
         </li>
         <li class="nav-links ">
-            <div >
                 <a href="/users/login">Login</a>
-            </div>
         </li>
         <li class="nav-links ">
-            <div >
                 <a href="/users/logout">Logout</a>
-            </div> 
         </li>   
     </ul>
+    <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
 </nav>
+<script type="text/javascript" src="/js/scripts.js"></script>  
+
     
 
